@@ -3,7 +3,7 @@ import hudson.AbortException
 
 node {
 
-    echo "I'm on the jenk2 branch, I hope"
+    echo "I'm on the ${BRANCH_NAME} branch, I hope"
 	stage ("Question") {
     
         try {
