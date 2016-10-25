@@ -36,8 +36,8 @@ node {
 //                ]
 //            )
 
-            // some insignificant change. Stoopid comment
-
+            currentBuild.result = 'SUCCESS'
+            
         }
         catch (FlowInterruptedException fie) {
             // flow interruption
@@ -52,6 +52,9 @@ node {
 //                        results: [[$class: "AnyBuildResult", message: "jenkins pipe succeeded", state: "FAILURE]
 //                    ]
 //            ])
+
+            currentBuild.result = 'FAILURE'
+            
         }
         catch (AbortException ae) {
             // abort
@@ -66,6 +69,8 @@ node {
 //                        results: [[$class: "AnyBuildResult", message: "jenkins pipe succeeded", state: "FAILURE]
 //                    ]
 //            ])
+
+            currentBuild.result = 'FAILURE'
         }
 
     }
