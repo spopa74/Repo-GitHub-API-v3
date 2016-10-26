@@ -3,7 +3,7 @@ import hudson.AbortException
 
 node {
 
-    echo "I'm on the ${BRANCH_NAME} branch, changes need code review."
+    echo "I'm on the ${BRANCH_NAME} branch, changes need code review. Try to see if a second branch PR will trigger the first one."
 	stage ("Question") {
     
         try {
@@ -43,6 +43,7 @@ node {
             // flow interruption
             echo "Flow interruption!"
             // setGitHubPullRequestStatus context:"ci-jenkins", message:"${fie}", state:"FAILURE"
+            
 //            step([
 //                    $class: "GitHubCommitStatusSetter",
 //                    contextSource: [$class: "ManuallyEnteredCommitContextSource", context: "currently doesn't really matter"],
