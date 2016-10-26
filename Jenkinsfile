@@ -3,7 +3,7 @@ import hudson.AbortException
 
 node {
 
-    echo "I'm on the ${BRANCH_NAME} branch, changes need code review. Try to see if a second branch PR will trigger the first one."
+    echo "I'm on the ${BRANCH_NAME} branch, change on change2 again. And again"
 	stage ("Question") {
     
         try {
