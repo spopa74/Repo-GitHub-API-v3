@@ -3,7 +3,7 @@ import hudson.AbortException
 
 node {
 
-    echo "I'm on the ${BRANCH_NAME} branch, changes need code review."
+    echo "I'm on the ${BRANCH_NAME} branch, change on change1."
 	stage ("Question") {
     
         try {
